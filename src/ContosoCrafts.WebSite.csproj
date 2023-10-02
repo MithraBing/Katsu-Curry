@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\data\favicon\" />
+    <Content Remove="Pages\AboutUs.cshtml" />
+    <Content Remove="wwwroot\data\favicon\favicon-16x16.png" />
+    <Content Remove="wwwroot\data\favicon\favicon.ico" />
+    <Content Remove="wwwroot\data\favicon\android-chrome-192x192.png" />
+    <Content Remove="wwwroot\data\favicon\apple-touch-icon.png" />
+    <Content Remove="wwwroot\data\favicon\site.webmanifest" />
+    <Content Remove="wwwroot\data\favicon\mstile-150x150.png" />
+    <Content Remove="wwwroot\data\favicon\browserconfig.xml" />
+    <Content Remove="wwwroot\data\favicon\favicon-32x32.png" />
+    <Content Remove="wwwroot\data\favicon\favicon-32x32.png" />
+    <Content Remove="wwwroot\data\favicon\browserconfig.xml" />
+    <Content Remove="wwwroot\data\favicon\apple-touch-icon.png" />
+    <Content Remove="wwwroot\data\favicon\site.webmanifest" />
+    <Content Remove="wwwroot\data\favicon\favicon.ico" />
+    <Content Remove="wwwroot\data\favicon\favicon-16x16.png" />
+    <Content Remove="wwwroot\data\favicon\mstile-150x150.png" />
+    <Content Remove="wwwroot\data\favicon\android-chrome-192x192.png" />
+    <Content Remove="wwwroot\data\favicon\safari-pinned-tab.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\data\favicon\" />
+    <Folder Include="Pages\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Pages\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+</Project>

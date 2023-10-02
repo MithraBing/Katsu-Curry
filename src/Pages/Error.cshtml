@@ -1,0 +1,15 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error ";
+}
+
+<h1 class="text-danger">@ErrorModel.error_str</h1>
+<br />
+<br />
+
+<h3>Oops! We know you are hungry! Let us take you back to the Home page so you can look for <strong>FOOD!</strong></h3>
+
+<br />
+<br />
+<a id="error_home" href="/Home"><h4>HOME</h4></a>

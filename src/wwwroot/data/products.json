@@ -1,0 +1,423 @@
+[
+  {
+    "Id": "kamonegi",
+    "Name": "Kamonegi",
+    "Phone": "(206) 632-0185",
+    "Type": "soba",
+    "Address": "1054 N 39TH STREET, SEATTLE, WA 98103",
+    "website": "https://www.kamonegiseattle.com/",
+    "img": "https://user-images.githubusercontent.com/33403106/163694130-d6f942b5-08bd-4ca8-9a2d-ff5ac7c68ec9.jpg",
+    "Hours": [
+      "Closed",
+      "4:00 \u2013 10:00 PM",
+      "4:00 \u2013 10:00 PM",
+      "4:00 \u2013 10:00 PM",
+      "4:00 \u2013 10:00 PM",
+      "4:00 \u2013 10:00 PM",
+      "Closed"
+    ],
+    "Dishes": [
+      "soba",
+      "tempra"
+    ],
+    "Ratings": [ 5, 5 ],
+    "PlaceID": "ChIJL3l1VVUUkFQR9DzkOndnea8"
+  },
+  {
+    "Id": "ten sushi",
+    "Name": "Ten Sushi",
+    "Phone": "(206) 453-3881",
+    "Type": "sushi",
+    "Address": "500 Mercer St #2b, Seattle, WA 98109, United States",
+    "website": "https://tensushiseattle.com/",
+    "img": "https://user-images.githubusercontent.com/33403106/164950147-2437cf8e-169f-450d-bda1-b4f35167380e.jpg",
+    "Hours": [
+      "10:00 AM \u2013 3:00 AM",
+      "10:00 AM \u2013 3:00 AM",
+      "10:00 AM \u2013 3:00 AM",
+      "10:00 AM \u2013 3:00 AM",
+      "10:00 AM \u2013 3:00 AM",
+      "10:00 AM \u2013 3:00 AM",
+      "10:00 AM \u2013 3:00 AM"
+    ],
+    "Dishes": [
+      "sushi",
+      "tempra"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJzU0sQUcVkFQRW-JhtEZVWD0"
+  },
+  {
+    "Id": "Momiji Capitol Hill",
+    "Name": "Momiji Capitol Hill",
+    "Phone": "(206) 457-4068",
+    "Type": "sushi",
+    "Address": "1522 12th Ave, Seattle, WA 98122",
+    "website": "https://www.momijiseattle.com/",
+    "img": "https://user-images.githubusercontent.com/81502009/166159643-de17e7bd-0bac-4ac9-ac43-9e1c1248ce0a.jpeg",
+    "Hours": [
+      "4:00 PM \u2013 11:00 PM",
+      "4:00 PM \u2013 11:00 PM",
+      "4:00 PM \u2013 11:00 PM",
+      "4:00 PM \u2013 11:00 PM",
+      "4:00 PM \u2013 12:00 PM",
+      "4:00 PM \u2013 12:00 PM",
+      "Closed"
+    ],
+    "Dishes": [
+      "sushi",
+      "kaisendon"
+    ],
+    "Ratings": [
+      5
+    ],
+    "PlaceID": "ChIJO4mDgc5qkFQRP-iajZvSwZU"
+  },
+  {
+    "Id": "Rondo Japanese Kitchen",
+    "Name": "Rondo Japanese Kitchen",
+    "Phone": "(206) 588-2051",
+    "Type": "izakaya",
+    "Address": "224 Broadway E, Seattle, WA 98102",
+    "website": "https://www.rondojapanesekitchen.com/",
+    "img": "https://user-images.githubusercontent.com/81502009/166160036-cd20ae41-4502-4591-814a-f33f5720fcd0.jpeg",
+    "Hours": [
+      "11:30 AM \u2013 9:30 PM",
+      "11:30 AM \u2013 9:30 PM",
+      "Closed",
+      "11:30 AM \u2013 9:30 PM",
+      "11:30 AM \u2013 9:30 PM",
+      "11:30 AM \u2013 9:30 PM",
+      "11:30 AM \u2013 9:30 PM"
+    ],
+    "Dishes": [
+      "karaage",
+      "katsu_kare"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJGdAxATMVkFQR6yvhh0A7Dgw"
+  },
+  {
+    "Id": "Ramen Danbo",
+    "Name": "Ramen Danbo",
+    "Phone": "(206) 566-5479",
+    "Type": "ramen",
+    "Address": "1222 E Pine St, Seattle, WA 98122",
+    "website": "https://ramendanbo.com/",
+    "img": "https://user-images.githubusercontent.com/81502009/166160446-41745abb-e19e-4254-99cf-7e5982ece944.jpeg",
+    "Hours": [
+      "11:00 AM \u2013 11:00 PM",
+      "11:00 AM \u2013 11:00 PM",
+      "11:00 AM \u2013 11:00 PM",
+      "11:00 AM \u2013 11:00 PM",
+      "11:00 AM \u2013 11:00 PM",
+      "11:00 AM \u2013 11:00 PM",
+      "11:00 AM \u2013 11:00 PM"
+    ],
+    "Dishes": [
+      "ramen"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJG6lbkM1qkFQRP8iOMgqQvvo"
+  },
+  {
+    "Id": "Menya Musashi Tsukemen \u0026 Ramen",
+    "Name": "Menya Musashi Tsukemen \u0026 Ramen",
+    "Phone": "(206) 257-4289",
+    "Type": "ramen",
+    "Address": "1510 Belmont Ave, Seattle, WA 98122",
+    "website": "http://menyamusashi-seattle.us/",
+    "img": "https://user-images.githubusercontent.com/81502009/166160721-ed993636-764c-4460-96d5-e40e894cb966.jpeg",
+    "Hours": [
+      "11:30 AM \u2013 3:00 PM, 5:00 PM \u2013 9:30 PM",
+      "11:30 AM \u2013 3:00 PM, 5:00 PM \u2013 9:30 PM",
+      "Closed",
+      "11:30 AM \u2013 3:00 PM, 5:00 PM \u2013 9:30 PM",
+      "11:30 AM \u2013 9:30 PM",
+      "11:30 AM \u2013 9:30 PM",
+      "11:30 AM \u2013 9:30 PM"
+    ],
+    "Dishes": [
+      "ramen",
+      "katsudon"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJLbCqjpprkFQRvDEwgmqAq6A"
+  },
+  {
+    "Id": "Tamari Bar",
+    "Name": "Tamari Bar",
+    "Phone": "(206) 979-8800",
+    "Type": "izakaya",
+    "Address": "500 E Pine St, Seattle, WA 98122",
+    "website": "https://www.tamaribarseattle.com/",
+    "img": "https://user-images.githubusercontent.com/81502009/166161097-343b0eb2-06b2-47a9-9a7f-09114df768bf.jpeg",
+    "Hours": [
+      "Closed",
+      "5:00 PM \u2013 11:00 PM",
+      "5:00 PM \u2013 11:00 PM",
+      "5:00 PM \u2013 11:00 PM",
+      "5:00 PM \u2013 11:00 PM",
+      "5:00 PM \u2013 11:00 PM",
+      "5:00 PM \u2013 11:00 PM"
+    ],
+    "Dishes": [
+      "gyoza",
+      "kaisendon",
+      "sashimi"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJ7_eIRctqkFQRguCK7heBC84"
+  },
+  {
+    "Id": "Ishoni Yakiniku",
+    "Name": "Ishoni Yakiniku",
+    "Phone": "(425) 455-0898",
+    "Type": "yakiniku",
+    "Address": "611 Broadway E, Seattle, WA 98102",
+    "website": "https://ishoniyakinikuseattle.wordpress.com/",
+    "img": "https://user-images.githubusercontent.com/81502009/166161466-e7daa6b0-73c2-423c-9e1e-cfb03ff99f47.jpeg",
+    "Hours": [
+      "Closed",
+      "5:30 PM \u2013 9:30 PM",
+      "5:30 PM \u2013 9:30 PM",
+      "5:30 PM \u2013 9:30 PM",
+      "5:30 PM \u2013 11:00 PM",
+      "5:30 PM \u2013 11:00 PM",
+      "5:30 PM \u2013 9:30 PM"
+    ],
+    "Dishes": [
+      "yakiniku"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJjYnhQJoVkFQRoZICxNhtBFs"
+  },
+  {
+    "Id": "Tsukushinbo",
+    "Name": "Tsukushinbo",
+    "Phone": "(206) 467-4004",
+    "Type": "multi-type",
+    "Address": "515 South Main St, Seattle, WA 98104",
+    "website": "https://twitter.com/Tsukushinbosea",
+    "img": "https://user-images.githubusercontent.com/81502009/166161911-845873d0-2f25-49e0-a99d-e8b5625095d8.jpeg",
+    "Hours": [
+      "5:00 PM \u2013 10:00 PM",
+      "5:00 PM \u2013 10:00 PM",
+      "5:00 PM \u2013 10:00 PM",
+      "5:00 PM \u2013 10:00 PM",
+      "5:00 PM \u2013 11:00 PM",
+      "5:00 PM \u2013 11:00 PM",
+      "5:00 PM \u2013 9:30 PM"
+    ],
+    "Dishes": [
+      "tamagoyaki",
+      "ebi_furai",
+      "sashimi"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJnc-QmrtqkFQRlFnDTZSfac8"
+  },
+  {
+    "Id": "Maneki",
+    "Name": "Maneki",
+    "Phone": "(503) 662-2814",
+    "Type": "multi-type",
+    "Address": "304 6th Ave S, Seattle, WA 98104",
+    "website": "https://manekiseattle.com/",
+    "img": "https://user-images.githubusercontent.com/81502009/171294951-437370f9-3004-4616-8b24-b520adcfe917.jpeg",
+    "Hours": [
+      "Closed",
+      "5:00 PM \u2013 9:00 PM",
+      "5:00 PM \u2013 9:00 PM",
+      "5:00 PM \u2013 9:00 PM",
+      "5:00 PM \u2013 9:00 PM",
+      "5:00 PM \u2013 9:00 PM",
+      "5:00 PM \u2013 9:00 PM"
+    ],
+    "Dishes": [
+      "takoyaki",
+      "tempura",
+      "sashimi"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJiycRj7tqkFQRA0eEzZouZWc"
+  },
+  {
+    "Id": "Gokan Sushi \u0026 Katsu",
+    "Name": "Gokan Sushi \u0026 Katsu",
+    "Phone": "(206) 325-3534",
+    "Type": "multi-type",
+    "Address": "954 E Union St, Seattle, WA 98122",
+    "website": "https://thegokan.com/",
+    "img": "https://user-images.githubusercontent.com/81502009/171295800-4a5fc949-cba2-40ca-b5ec-da84ac7e9c62.jpeg",
+    "Hours": [
+      "Closed",
+      "4:00 PM \u2013 10:00 PM",
+      "4:00 PM \u2013 10:00 PM",
+      "4:00 PM \u2013 10:00 PM",
+      "4:00 PM \u2013 12:00 PM",
+      "4:00 PM \u2013 12:00 PM",
+      "4:00 PM \u2013 10:00 PM"
+    ],
+    "Dishes": [
+      "takoyaki",
+      "tempura",
+      "karaage",
+      "tonkatsu"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJyfULEMxqkFQRzsf3us_nEZM"
+  },
+  {
+    "Id": "Migoto",
+    "Name": "Migoto",
+    "Phone": "(206) 329-1112",
+    "Type": "multi-type",
+    "Address": "514 12th Ave, Seattle, WA 98122",
+    "website": "https://www.gomigoto.com/",
+    "img": "https://user-images.githubusercontent.com/81502009/171296383-10254346-36f9-4ae4-a6c8-4845fb9870fa.jpeg",
+    "Hours": [
+      "1:00 PM \u2013 9:00 PM",
+      "1:00 PM \u2013 9:30 PM",
+      "Closed",
+      "1:00 PM \u2013 9:30 PM",
+      "1:00 PM \u2013 9:30 PM",
+      "1:00 PM \u2013 9:30 PM",
+      "1:00 PM \u2013 9:00 PM"
+    ],
+    "Dishes": [
+      "udon",
+      "gyoza",
+      "karaage",
+      "tonkatsu"
+    ],
+    "Ratings": null,
+    "PlaceID": "ChIJm2IIKKlrkFQRjMX5VVHr19I"
+  },
+  {
+    "Id": "bc2360fc-1cfe-49e2-bbb8-26c6d073bf66",
+    "Name": "Shiki",
+    "Phone": "(206) 281-1352",
+    "Type": null,
+    "Address": "4 W Roy St, Seattle, WA 98119, United States",
+    "website": "http://www.shikijapaneserestaurant.com/",
+    "img": "https://user-images.githubusercontent.com/33403106/164950144-169c9e69-ed7e-4c8d-bdac-118df8ecd136.png",
+    "Hours": [
+      "Closed",
+      "Closed",
+      "5:00 \u2013 9:00 PM",
+      "5:00 \u2013 9:00 PM",
+      "5:00 \u2013 9:00 PM",
+      "5:00 \u2013 9:00 PM",
+      "5:00 \u2013 9:00 PM"
+    ],
+    "Dishes": null,
+    "Ratings": null,
+    "PlaceID": "ChIJ83vnL0IVkFQRAI20xtnp6do"
+  },
+  {
+    "Id": "93062bad-873d-40fb-99c0-9570ad2e7c72",
+    "Name": "Hurry Curry of Tokyo",
+    "Phone": "(206) 681-9443",
+    "Type": null,
+    "Address": "825 Harrison St, Seattle, WA 98109, United States",
+    "website": "http://www.hurrycurryoftokyo-seattle.com/",
+    "img": "https://user-images.githubusercontent.com/33403106/164950135-2b08b06c-138d-4d8f-9c2e-be83b7d41394.jpg",
+    "Hours": [
+      "10:00 AM \u2013 10:00 PM",
+      "10:00 AM \u2013 10:00 PM",
+      "10:00 AM \u2013 10:00 PM",
+      "10:00 AM \u2013 10:00 PM",
+      "10:00 AM \u2013 10:00 PM",
+      "10:00 AM \u2013 10:00 PM",
+      "10:00 AM \u2013 9:30 PM"
+    ],
+    "Dishes": null,
+    "Ratings": null,
+    "PlaceID": "ChIJR_81-DcVkFQRA45NENHOdPc"
+  },
+  {
+    "Id": "e49275c9-6a11-489a-b2bb-ed27979c68c5",
+    "Name": "Kizuki Ramen \u0026 Izakaya",
+    "Phone": "(425) 553-0867",
+    "Type": null,
+    "Address": "320 E Pine St, Seattle, WA 98122, United States",
+    "website": "https://www.kizuki.com/",
+    "img": "https://user-images.githubusercontent.com/33403106/164950139-37178e59-e21a-475a-8db4-9b321f1fc2cc.jpg",
+    "Hours": [
+      "11:00 AM \u2013 9:30 PM",
+      "11:00 AM \u2013 9:30 PM",
+      "11:00 AM \u2013 9:30 PM",
+      "11:00 AM \u2013 9:30 PM",
+      "11:00 AM \u2013 10:00 PM",
+      "11:00 AM \u2013 10:00 PM",
+      "11:00 AM \u2013 9:30 PM"
+    ],
+    "Dishes": null,
+    "Ratings": null,
+    "PlaceID": "ChIJsaflMstqkFQR5SEdWDIEiGs"
+  },
+  {
+    "Id": "07a41dc4-d50a-4ab9-ba95-76f3c389eddc",
+    "Name": "Itsumono",
+    "Phone": "(206) 682-1828",
+    "Type": null,
+    "Address": "610 S Jackson St, Seattle, WA 98104, United States",
+    "website": "https://itsumonoseattle.wixsite.com/home",
+    "img": "https://user-images.githubusercontent.com/33403106/164950137-cac19696-dcc8-469d-a710-565a1488e991.jpg",
+    "Hours": [
+      "Closed",
+      "5:00 PM \u2013 12:00 AM",
+      "5:00 PM \u2013 12:00 AM",
+      "5:00 PM \u2013 12:00 AM",
+      "5:00 PM \u2013 2:00 AM",
+      "5:00 PM \u2013 2:00 AM",
+      "Closed"
+    ],
+    "Dishes": null,
+    "Ratings": null,
+    "PlaceID": "ChIJ4ddzd7xqkFQR3ysPAKkjWzw"
+  },
+  {
+    "Id": "326dae7c-f331-481b-acfd-2ae677d55512",
+    "Name": "ISSIAN",
+    "Phone": "(206) 632-7010",
+    "Type": null,
+    "Address": "1618 N 45th St, Seattle, WA 98103, United States",
+    "website": "https://issianjapanesestonegrill.weebly.com/",
+    "img": "https://user-images.githubusercontent.com/33403106/164950136-33e90c0d-45c6-4966-8f78-aab4ce8325ab.jpg",
+    "Hours": [
+      "Closed",
+      "Closed",
+      "Closed",
+      "Closed",
+      "Closed",
+      "Closed",
+      "Closed"
+    ],
+    "Dishes": null,
+    "Ratings": null,
+    "PlaceID": "ChIJRU0bzVAUkFQROPiPwuOpPkU"
+  },
+  {
+    "Id": "0bb9b92a-0369-4b23-845a-82d342d10ceb",
+    "Name": "Umi Sake House",
+    "Phone": "(206) 374-8717",
+    "Type": null,
+    "Address": "2230 1st Ave, Seattle, WA 98121, United States",
+    "website": "https://www.umisakehouse.com/",
+    "img": "https://user-images.githubusercontent.com/33403106/164950150-03341740-de61-4f1e-bdb4-8553a733c639.jpg",
+    "Hours": [
+      "4:00 \u2013 11:00 PM",
+      "4:00 \u2013 11:00 PM",
+      "4:00 \u2013 11:00 PM",
+      "4:00 \u2013 11:00 PM",
+      "4:00 PM \u2013 12:00 AM",
+      "4:00 PM \u2013 12:00 AM",
+      "4:00 \u2013 11:00 PM"
+    ],
+    "Dishes": null,
+    "Ratings": null,
+    "PlaceID": "ChIJlwUFuk0VkFQRzdTvH0McgL0"
+  }
+]

@@ -1,0 +1,248 @@
+@using ContosoCrafts.WebSite.Models
+@using ContosoCrafts.WebSite.Services
+@using Microsoft.AspNetCore.Components.Web
+@inject JsonFileProductService ProductService
+
+<div class="d-inline-block" style="margin-right:0px;">
+    <div id="restaurant_page" class="restaurant_page" runat="server">
+        <div class="card-columns">
+            @foreach (var product in ProductService.GetProducts())
+            {
+                <div class="card">
+                    <a href="/Product/Read/@product.Id" onclick="">
+                        <div class="card-img" style="background-image: url('@product.Image');">
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id"
+                                    data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                                More Info
+                            </button>
+                            <button @onclick="(e => SelectProduct(product.Id))" id="QuickLinkButton_@product.Id"
+                                    data-toggle="modal" data-target="#productModal" class="hide">
+                                Quick Link
+                            </button>
+                        </small>
+                    </div>
+                </div>
+            }
+        </div>
+
+
+        <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                @if (selectedProduct != null)
+                {
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productTitle">@selectedProduct.Name</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card">
+                                <div class="card-img" style="background-image: url('@selectedProduct.Image');">
+                                </div>
+                                <div class="card-body">
+                                    <table>
+                                        <thead><tr><th width="40%"></th><th width="60%"></th></tr></thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="card-text fa-map-pin"><b> LOCATION:</b></td>
+                                                <td class="card-content"> @selectedProduct.Address</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="card-text fa-phone"><b> PHONE:</b></td>
+                                                <td class="card-content"> @selectedProduct.Phone</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="card-text fa-clock-o"><b> HOURS:</b></td>
+                                                <td>
+                                                    @if (selectedProduct.Hours != null)
+                                                    {
+                                                        @if (selectedProduct.Hours.Length >= 7)
+                                                        {
+                                                            <table>
+                                                                <tr><td class="card-content">Monday</td><td class="card-content">@selectedProduct.Hours[0]</td></tr>
+                                                                <tr><td class="card-content">Tuesday</td><td class="card-content">@selectedProduct.Hours[1]</td></tr>
+                                                                <tr><td class="card-content">Wednesday</td><td class="card-content">@selectedProduct.Hours[2]</td></tr>
+                                                                <tr><td class="card-content">Thursday</td><td class="card-content">@selectedProduct.Hours[3]</td></tr>
+                                                                <tr><td class="card-content">Friday</td><td class="card-content">@selectedProduct.Hours[4]</td></tr>
+                                                                <tr><td class="card-content">Saturday</td><td class="card-content">@selectedProduct.Hours[5]</td></tr>
+                                                                <tr><td class="card-content">Sunday</td><td class="card-content">@selectedProduct.Hours[6]</td></tr>
+                                                            </table>
+                                                        }
+                                                    }
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="card-text fa-globe"><b> WEBSITE:</b></td>
+                                                <td class="card-content"> <a href="@selectedProduct.Url" target="_blank">@selectedProduct.Url</a></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot></tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            @if (voteCount == 0)
+                            {
+                                <span>Be the first to vote!</span>
+                            }
+                            else
+                            {
+                                <span>@voteCount @voteLabel</span>
+                            }
+                            @for (int i = 1; i < 6; i++)
+                            {
+                                var currentStar = i;
+                                if (i <= currentRating)
+                                {
+                                    <span class="fa fa-star checked" @onclick="(e => SubmitRating(currentStar))"></span>
+                                }
+                                else
+                                {
+                                    <span class="fa fa-star" @onclick="(e => SubmitRating(currentStar))"></span>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div id="food_page" class="hide" runat="server">
+        <div class="card-columns">
+            @foreach (var food in ProductService.GetFood())
+            {
+                <div class="card">
+                    <a href="/Product/ReadFood/?id=@food.Id" onclick="">
+                        <div class="card-img" style="background-image: url('@food.Image');">
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">@food.Name</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            <button @onclick="(e => SelectFood(food.Id))" id="MoreInfoButton_@food.Id"
+                                    data-toggle="modal" data-target="#FoodModal" class="btn btn-primary">
+                                More Info
+                            </button>
+                        </small>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="modal fade" id="FoodModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                @if (selectedFood != null)
+                {
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productTitle">@selectedFood.Name</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card">
+                                <div class="card-img" style="background-image: url('@selectedFood.Image');">
+                                </div>
+                                <div class="card-body">
+                                    <b class="card-text"><b>@selectedFood.Name</b></b><br />
+                                    <p class="card-text">@selectedFood.Description</p>
+                                </div>
+                                <div class="card-body">
+                                    <b class="card-text"><b>RESTAURANT SUGGESTION</b></b><br />
+                                    <table>
+                                        <tr>
+                                            @if (selectedFood.Restaurants != null)
+                                            {
+                                                @foreach (var restaurant in selectedFood.Restaurants)
+                                                {
+                                                    @foreach (var product in ProductService.GetProducts())
+                                                    {
+                                                        @if (product.Id == restaurant)
+                                                        {
+                                                            <td>
+                                                                <figure>
+                                                                    <img class="img-frame" src=@product.Image alt="restaurant image">
+                                                                    <figcaption align="center"><a href="@product.Url" target="_blank">@product.Name </a></figcaption>
+                                                                </figure>
+                                                            </td>
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    Product? selectedProduct;
+    string? selectedProductId;
+    Food? selectedFood;
+    string? selectedFoodId;
+
+    void SelectProduct(string productId)
+    {
+        selectedProductId = productId;
+        selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
+        GetCurrentRating();
+    }
+
+    void SelectFood(string foodId)
+    {
+        selectedFoodId = foodId;
+        selectedFood = ProductService.GetFood().First(x => x.Id == foodId);
+    }
+
+    int currentRating = 0;
+    int voteCount = 0;
+    string? voteLabel;
+
+    void GetCurrentRating()
+    {
+        if (selectedProduct.Ratings == null)
+        {
+            currentRating = 0;
+            voteCount = 0;
+        }
+        else
+        {
+            voteCount = selectedProduct.Ratings.Count();
+            voteLabel = voteCount > 1 ? "Votes" : "Vote";
+            currentRating = selectedProduct.Ratings.Sum() / voteCount;
+        }
+        //System.Console.WriteLine($"Current rating for {selectedProduct?.Id}: {currentRating}");
+    }
+
+    void SubmitRating(int rating)
+    {
+        //System.Console.WriteLine($"Rating received for {selectedProduct?.Id}: {rating}");
+        /*if (selectedProductId == null)
+            return;*/
+        ProductService.AddRating(selectedProductId, rating);
+        SelectProduct(selectedProductId);
+    }
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

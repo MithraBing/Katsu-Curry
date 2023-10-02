@@ -1,0 +1,103 @@
+﻿@page "{id?}"
+@model ContosoCrafts.WebSite.Pages.Product.ProductIndexModel
+@{
+    ViewData["Title"] = "Index page";
+}
+
+<div id="toggle_placement" class="d-block float-right">
+
+    <img class="d-inline restaurant_icon" />
+    <div class="d-inline" id="toggle" runat=”server”>
+        <!--The swithc button function-->
+
+        <label class="switch" runat=”server”>
+
+            <input id="toggle_btn" type="checkbox" runat=”server”>
+            <span id="testslider" class="slider round"></span>
+
+        </label>
+
+    </div>
+    <img class="d-inline food_icon" />
+
+
+</div>
+
+<div class="container">
+  
+    <div>
+        <div class="prod_ind">
+            <a class="return" asp-page="/Home"><img class="prod_ind return_icon" /></a>
+            <input id="searchbar" type="text" name="search" placeholder="Search .." onkeyup="Search_Item()">
+        </div>
+    </div>
+    <div id="restaurant_index" class="" runat="server">
+        <a asp-page="Create" class="btn btn-link">+ Create</a>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="col-9">Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model.Products)
+                {
+                    <tr class = "product_items" id="@product.Name">
+                        <td><a asp-page="Read" asp-route-id="@product.Id">@product.Name</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div id="food_index" class="hide" runat="server">
+        <a asp-page="CreateFood" class="btn btn-link">+ Create</a>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="col-9">Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var food in Model.Food)
+                {
+                    <tr class="product_items" id="@food.Name">
+                        <td><a asp-page="ReadFood" asp-route-id="@food.Id">@food.Name</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@if (Model.RouteId == "food")
+{
+    <script type="text/javascript">{
+        document.getElementById("restaurant_index").classList.toggle('hide');
+        document.getElementById("food_index").classList.toggle('hide');
+        document.getElementById("toggle_btn").checked = true;
+    }</script>
+}
+
+<script type="text/javascript">document.getElementById("testslider").addEventListener('click', () => {
+        document.getElementById("restaurant_index").classList.toggle('hide');
+        document.getElementById("food_index").classList.toggle('hide');
+    });</script>
+
+<script type="text/javascript">function Search_Item()
+{
+    let input = document.getElementById('searchbar').value;
+    input = input.toLowerCase();
+
+    let x = document.getElementsByClassName('product_items');
+
+    for (i = 0; i < x.length; i++) {
+
+        if (!x[i].id.toLowerCase().includes(input)) {
+            x[i].classList.add("hide");
+        }
+        else {
+            x[i].classList.remove("hide");
+        }
+    }
+
+}</script>

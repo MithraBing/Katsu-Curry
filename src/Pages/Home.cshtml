@@ -1,0 +1,58 @@
+﻿@page
+@using ContosoCrafts.WebSite.Components
+@model ContosoCrafts.WebSite.Pages.HomeModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="d-block float-left">
+    @if (Model.Products is not null && Model.Foods is not null)
+    {
+        Random rand = new Random();
+        var random_rest_id = Model.Products.ElementAt(rand.Next(0, Model.Products.Count())).Id;
+        var random_food_id = Model.Foods.ElementAt(rand.Next(0, Model.Foods.Count())).Id;
+        <button class="d-inline float-left dice" id="hungry_dice"
+                onclick="Random_Suggestion('@random_rest_id', '@random_food_id')">
+            <img id="dice_icon" />
+            <lable>I'm Feeling Hungry</lable>
+        </button>
+    }
+</div>
+<div id="toggle_placement" class="d-block float-right">
+
+    <img class="d-inline restaurant_icon" />
+    <div class="d-inline" id="toggle" runat=”server”>
+        <!--The swithc button function-->
+
+        <label class="switch" runat=”server”>
+
+            <input id="toggle_btn" type="checkbox" runat=”server”>
+            <span id="testslider" class="slider round"></span>
+
+        </label>
+
+    </div>
+    <img class="d-inline food_icon" />
+
+
+</div>
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>
+<script type="text/javascript">function Random_Suggestion(rid, fid)
+{
+    document.getElementById("dice_icon").classList.add("dice_rotate");
+
+    setTimeout(function () {
+
+        if (document.getElementById("toggle_btn").checked == false) {
+            var url = "/Product/Read/" + rid
+            window.location.assign(url);
+        } else {
+            var url = "/Product/ReadFood/?id=" + fid
+            window.location.assign(url);
+        } 
+
+    }, 1000);  
+}
+</script>
